@@ -1,0 +1,40 @@
+
+<html>
+<head>
+	<title>Blog Post</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<header>
+	<div id="logo"> blog</div>
+
+</header>
+
+
+
+<form method="post">
+	<label>title
+		<div>
+			Title
+		</div>
+		<input type="text" name="title" value="{{title}}" >
+	</label>
+
+	<label>
+		<div>art</div>
+		<textarea name="art">{{art}} </textarea> 
+	</label>
+	<div class="error" >{{error}}</div>
+	<input type="submit" >
+</form>
+<hr>
+{% for art in arts %}
+<div class"art">
+	<div class="art-title">{{art.title}}</div>
+	<pre class="art-body">
+		{{art.art}}
+	</pre>
+{% endfor %}	 
+</div>
+</body>
+</html>
