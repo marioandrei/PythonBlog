@@ -1,16 +1,18 @@
 body {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Gentium Book Basic', serif;
     font-size: 14px;
 
     width: 800px;
     margin: 0 auto;
     padding: 10px;
-    color: #333;
+    color: rgb(34, 34, 34);
+    /* background-color: rgb(239, 71, 35); */
+    background-color: rgb(160, 160, 160); 
 }
 
 h2 {
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 700;
     margin-bottom: 20px;
 }
 
@@ -47,33 +49,44 @@ input[type=submit] {
 
 .main-title {
     display: block;
-    color: #222;
+    color: rgb(34, 34, 34);
     font-size: 40px;
-    font-weight: bold;
+    font-weight: 800;
     text-align: center;
     margin-bottom: 30px;
     text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+
 }
 
+.main-title .lower{
+    font-family: 'gentium book basic';
+    text-transform: lowercase;
+    font-weight: 700;
+    font-style: italic;
+}
 .post + .post {
     margin-top: 15px;
 }
 
 .post-heading {
     position: relative;
-    border-bottom: 3px solid #666;
+    border-bottom: 3px solid rgb(34, 34, 34);
 }
 
 .post-title {
+    font-family: 'Open Sans', sans-serif;
     font-size: 24px;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 .post-date {
     position: absolute;
     right: 0px;
     bottom: 0px;
-    color: #999;
+    color: #fff;
 
 }
 
