@@ -12,9 +12,6 @@ import re
 # and Shay Erlichmen for bcrypt 
 import bcrypt
 
-
-
-
 from signup import *
 
 #string and db
@@ -102,8 +99,6 @@ class Handler(webapp2.RequestHandler):
 		return t.render(params)
 	def render(self, template,**kw):
 		self.write(self.render_str(template,**kw))
-
-
 
 
 
@@ -308,6 +303,7 @@ class NewPost(BlogHandler):
 			p = Post(parent = blog_key(), title = title, text = text)
 			p.put()
 			#self.redirect('/blog/post/%s' % str(p.key().id()))
+			#the title is irrelevant, the important thing is the post id
 			self.redirect('/blog/post/%s/%s' % (str(p.key().id()), permalink))
 
 		else:
@@ -319,11 +315,6 @@ class NewPost(BlogHandler):
 
 ##############################################################
 ###
-###      ##############################################
-###      ##      ##                    ##           ### 
-###      ##      ##                    ##           ### 
-###      ##########                    ################
-### 
 ##############################################################
 
 
